@@ -26,19 +26,18 @@ const VideoList = () => {
     },[])
     return (
         <>
-            <h1>VideoList</h1>
-            <h1>Welcome to youtube</h1>
-            {/* <p>data is : {data?.pageInfo?.totalResults}</p> */}
-            {/* <p>item is : {data?.items}</p> */}
-            {/* <p>etag is : {data.etag}</p> */}
-            {/* {
-                res.map(videos => (
-                    <div>
-                        
+
+            <div className='flex flex-wrap items-center justify-center gap-1'> 
+            {
+                data.map(item => (
+                    <div className='w-[25%]'>
+                        <img src={item?.snippet?.thumbnails?.high?.url} alt="" />
                     </div>
                 ))
-            } */}
-            <p>new item: {data[0]?.kind}</p>
+            }
+            </div>
+
+            
             <p>new item: {data[0]?.id}</p>
             <a href="https://www.youtube.com/watch?v=M412brAv-do">open youtube</a>
             
