@@ -31,15 +31,16 @@ const VideoList = () => {
             {
                 data.map(item => (
                     <div className='w-[25%]'>
-                        <img src={item?.snippet?.thumbnails?.high?.url} alt="" />
+                        <img className='cursor-pointer' src={item?.snippet?.thumbnails?.high?.url} alt="" />
                     </div>
                 ))
             }
+
             </div>
+            <iframe  title="video" src="http://localhost:3000/watch?v=_fWyWcZB7VA" frameborder="0">click</iframe>
 
             
-            <p>new item: {data[0]?.id}</p>
-            <a href="https://www.youtube.com/watch?v=M412brAv-do">open youtube</a>
+            {/* <a href="https://www.youtube.com/watch?v=M412brAv-do">open youtube</a> */}
             
 
         </>
