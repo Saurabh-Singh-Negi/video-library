@@ -1,50 +1,13 @@
-// import axios from 'axios';
-// import { useEffect,useState } from 'react';
-// const VideoList = () => {
-//     const [data,setData] = useState([]);
-//     // const API_KEY = process.env.REACT_APP_YT_API_KEY;
-//     // var res;
-//     // const getVideos = async() => {
-//     //     const data = await fetch("https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=" + API_KEY);
-//     //     const res = await data.json();
-//     //     console.log(res);
-//     // }
+import React from 'react'
 
-//     // useEffect(() => {
-//     //     getVideos();
-//     // },[])
-//     useEffect(() => {
-//         axios.get("https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=AIzaSyDrJKy-El2EFOqYaUUFV2tYF_gvIHgx3Is")
-//         .then(res => {
-//             console.log(res.data.items);
-//             setData(res.data.items);
-//             console.log("dataset", data);
-//         })
-//         .catch(error => {
-//             console.log(error.message)
-//         })
-//     },[])
-//     return (
-//         <>
+const VideoList = ({data}) => {
+    
+  return (
+    <>
+        {/* <iframe width="560" height="315"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
+        <img className='cursor-pointer'  src={data?.snippet?.thumbnails?.high?.url} alt="" />
+    </>
+  )
+}
 
-//             <div className='flex flex-wrap items-center justify-center gap-1'> 
-//             {
-//                 data.map(item => (
-//                     <div className='w-[25%]'>
-//                         <img className='cursor-pointer' src={item?.snippet?.thumbnails?.high?.url} alt="" />
-//                     </div>
-//                 ))
-//             }
-
-//             </div>
-            
-
-            
-            
-            
-
-//         </>
-//     )
-// }
-
-// export default VideoList;
+export default VideoList

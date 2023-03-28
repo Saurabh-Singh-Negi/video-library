@@ -6,15 +6,16 @@ import SuggestedVideos from './components/SuggestedVideos';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import WatchVideo from './components/WatchVideo';
 import { useState } from 'react';
+import SearchResult from './components/SearchResult';
 function App() {
-  const [info, setInfo] = useState([]);
   return (
     <>
     <BrowserRouter>
     <Navbar/>
     <Routes>
-      <Route path="/" element={<SuggestedVideos getInfo={setInfo}/>} />
-      <Route path="/videos/:id" element={<WatchVideo info={info}/>} />
+      <Route path="/" element={<SuggestedVideos/>} />
+      <Route path="/videos/:id" element={<WatchVideo/>} />
+      <Route path="/searchresults/:title" element={<SearchResult/>} />
     </Routes>
     </BrowserRouter>
 
