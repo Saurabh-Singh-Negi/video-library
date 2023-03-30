@@ -8,15 +8,12 @@ const SearchBar = () => {
     const handleClick = (e) => {
         Navigate(`/searchresults/${data}`);
         e.preventDefault();
-        
-        
-            
-        
+       
     }
     const handleChange = (e) => {
-        console.log(e.target.value);
+        // console.log(e.target.value);
         setData(e.target.value);
-        console.log("data", data);
+        // console.log("data", data);
     }
     return (
         <div className='flex flex-row items-center justify-center'>

@@ -14,7 +14,7 @@ const SearchResult = () => {
     useEffect(() => {
         axios.get(`${BASE}${key}`)
             .then(res=> {
-                console.log(res.data.items);
+                // console.log(res.data.items);
                 const result = res.data.items.map(item => (
                     {
                     ...item,
